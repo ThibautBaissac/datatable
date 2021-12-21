@@ -2,7 +2,14 @@
 
 A simple yet dynamic datatable example using Rails 7.
 
-Stack:
+1. In action
+2. Sack
+3. Quickstart
+
+## 1. In action
+![datatable](https://user-images.githubusercontent.com/59996803/146937558-113ac585-ece8-4277-b27e-3ceebdc9daad.gif)
+
+## 2. Stack
 - Rails 7
 - esbuild
 - Hotwire
@@ -10,7 +17,7 @@ Stack:
 - Pagy
 - pg_search
 
-# Quick Start
+## 3. Quick Start
 
 1. Install Rails 7
   ```bash
@@ -39,5 +46,3 @@ Stack:
   ```bash
   ./bin/dev
   ```
-
-<!-- ![datatable](https://user-images.githubusercontent.com/59996803/146773974-bf9982a8-02b2-48be-bafe-63f34d5ece15.png) -->
