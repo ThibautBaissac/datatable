@@ -1,24 +1,43 @@
-# README
+# DATATABLE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple yet dynamic datatable example using Rails 7.
 
-Things you may want to cover:
+Stack:
+- Rails 7
+- esbuild
+- Hotwire
+- Bootstrap 5
+- Pagy
+- pg_search
 
-* Ruby version
+# Quick Start
 
-* System dependencies
+1. Install Rails 7
+  ```bash
+  gem install rails
+  ```
 
-* Configuration
+2. Clone
+  ```bash
+  git@github.com:ThibautBaissac/datatable.git
+  ```
 
-* Database creation
+3. Bundle & yarn install
+  ```bash
+  bundle
+  yarn install
+  ```
 
-* Database initialization
+4. Run rails db commands
+  ```bash
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  ```
 
-* How to run the test suite
+5. Run rails server
+  ```bash
+  ./bin/dev
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<!-- ![datatable](https://user-images.githubusercontent.com/59996803/146773974-bf9982a8-02b2-48be-bafe-63f34d5ece15.png) -->
