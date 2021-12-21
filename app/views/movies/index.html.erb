@@ -1,2 +1,23 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Movies</h1>
+<%= form_with url: "", method: :get, data: {turbo_frame: "movies", turbo_action: "advance"} do |form| %>
+  Show:  <%= form.select :count, options_for_select([10, 25, 50], selected: params[:count]), {}, {onchange: "this.form.requestSubmit()"} %>
+  Search:  <%= form.search_field :query, value: params[:query], onkeyup: "this.form.requestSubmit()" %>
+<% end %>
+
+<%= turbo_frame_tag "movies" do %>
+  <table class="table table-striped table-hover mt-3">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col" style="width: 30%"><%= sort_link_to "Title", :title, data: {turbo_action: "advance" } %></th>
+        <th scope="col" style="width: 10%"><%= sort_link_to "Rating", :rating, data: {turbo_action: "advance" } %></th>
+        <th scope="col" style="width: 40%"><%= sort_link_to "Quote", :quote, data: {turbo_action: "advance" } %></th>
+        <th scope="col" style="width: 10%"><%= sort_link_to "Release date", :release_date, data: {turbo_action: "advance" } %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @movies %>
+    </tbody>
+  </table>
+  <%== pagy_bootstrap_nav @pagy %>
+<% end %>
